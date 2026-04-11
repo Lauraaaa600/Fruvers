@@ -34,7 +34,7 @@ public class ListaProductos {
         NodoProducto aux = inicio;
 
         while (aux != null) {
-            if (aux.dato.nombre == nombre) {
+            if (aux.dato.nombre.equals(nombre)) {
                 return aux.dato;
             }
             aux = aux.siguiente;
