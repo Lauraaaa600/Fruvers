@@ -15,6 +15,7 @@ public class ListaProductos {
         }
         aux.siguiente = nuevo;
        }
+  }
      public void mostrar() {
 
         if (inicio == null) {
