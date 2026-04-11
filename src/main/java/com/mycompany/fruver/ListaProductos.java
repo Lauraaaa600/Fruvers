@@ -2,9 +2,9 @@ package com.mycompany.fruver;
 
 public class ListaProductos {
     NodoProducto inicio;
+    
   public void insertar(Producto p) {
     NodoProducto nuevo = new NodoProducto(p);
-    inicio = nuevo;
     
     if (inicio == null) {
         inicio = nuevo;
@@ -15,6 +15,13 @@ public class ListaProductos {
         }
         aux.siguiente = nuevo;
     }
-   }  
+     public void mostrar() {
+        NodoProducto aux = inicio;
+
+        while (aux != null) {
+            System.out.println(aux.dato.nombre);
+            aux = aux.siguiente;
+        }
+  }  
     
 }
