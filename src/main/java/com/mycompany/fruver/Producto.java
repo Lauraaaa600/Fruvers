@@ -11,7 +11,12 @@ public class Producto {
         this.cantidad=cantidad;      
     }
     public void vender(int cant) {
-        cantidad -= cant; 
+     if (cant <= cantidad) {
+        cantidad -= cant;
+    } else {
+        System.out.println("No hay suficiente cantidad");
+    }
+
     }
 
 }
