@@ -10,4 +10,8 @@ public class Producto {
         this.nombre=nombre;
         this.cantidad=cantidad;      
     }
+    public void vender(int cant) {
+        cantidad -= cant; 
+    }
+
 }
