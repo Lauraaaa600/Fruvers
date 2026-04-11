@@ -8,20 +8,26 @@ public class ListaProductos {
     
     if (inicio == null) {
         inicio = nuevo;
-    } else {
+       } else {
         NodoProducto aux = inicio;
         while (aux.siguiente != null) {
             aux = aux.siguiente;
         }
         aux.siguiente = nuevo;
-    }
+       }
      public void mostrar() {
+
+        if (inicio == null) {
+            System.out.println("Lista vacia");
+            return;
+        }
+
         NodoProducto aux = inicio;
 
         while (aux != null) {
             System.out.println(aux.dato.nombre);
             aux = aux.siguiente;
         }
-  }  
+    }  
     
 }
