@@ -29,7 +29,7 @@ public class Fruver {
             
             if(p !=null) {
                 c.comprar(p,2);
-                
+                System.out.println("Compra realizada");
             }else {
                 System.out.println("Producto no encontrado");
             }
@@ -40,6 +40,7 @@ public class Fruver {
                  Cliente c2 = new Cliente("Ana");
                  
                  t.atender(c2);
+                 System.out.println("Atencion completada");
                  break;
     
     }  
