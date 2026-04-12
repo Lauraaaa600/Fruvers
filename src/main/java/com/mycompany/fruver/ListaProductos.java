@@ -33,8 +33,9 @@ public class ListaProductos {
     public Producto buscar(String nombre) {
         NodoProducto aux = inicio;
 
-        while (aux != null) {
+        while (aux != null) {   
             if (aux.dato.nombre.equals(nombre)) {
+                System.out.println("Producto: " + aux.dato.nombre + " Cantidad: " + aux.dato.cantidad);  
                 return aux.dato;
             }
             aux = aux.siguiente;
