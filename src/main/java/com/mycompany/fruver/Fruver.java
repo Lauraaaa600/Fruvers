@@ -27,8 +27,14 @@ public class Fruver {
             Cliente c= new Cliente("Juan");
             Producto p = lista.buscar("Banano");
             
-            c.comprar(p,2);
+            if(p !=null) {
+                c.comprar(p,2);
+                
+            }else {
+                System.out.println("Producto no encontrado");
+            }
             break;
+            
     
     
     }    
