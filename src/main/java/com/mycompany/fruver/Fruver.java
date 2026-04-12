@@ -35,8 +35,15 @@ public class Fruver {
             }
             break;
             
+             case 3:
+                 Trabajador t=new Trabajador("Pedro");
+                 Cliente c2 = new Cliente("Ana");
+                 
+                 t.atender(c2);
+                 break;
     
+    }  
+   
     
-    }    
 }
 }
