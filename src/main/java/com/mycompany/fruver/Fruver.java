@@ -15,4 +15,12 @@ public class Fruver {
     lista.insertar(new Producto("Manzana",10));
     lista.insertar(new Producto("Pera",5));
     }
+    
+    int opcion = 2;
+    
+    switch(opcion){
+        case 1:
+    
+    
+}
 }
