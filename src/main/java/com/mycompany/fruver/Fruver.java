@@ -9,5 +9,7 @@ public class Fruver {
     System.out.println("1: Mostrar producto");
     System.out.println("2: Cliente compra");
     System.out.println("3: Trabajador atiende cliente");
+    
+    ListaProductos lista= new ListaProductos();
     }
 }
