@@ -11,5 +11,8 @@ public class Fruver {
     System.out.println("3: Trabajador atiende cliente");
     
     ListaProductos lista= new ListaProductos();
+    
+    lista.insertar(new Producto("Manzana",10));
+    lista.insertar(new Producto("Pera",5));
     }
 }
