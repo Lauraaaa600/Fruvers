@@ -23,6 +23,13 @@ public class Fruver {
     lista.mostrar();
     break;
     
+        case 2:
+            Cliente c= new Cliente("Juan");
+            Producto p = lista.buscar("Banano");
+            
+            c.comprar(p,2);
+            break;
+    
     
     }    
 }
