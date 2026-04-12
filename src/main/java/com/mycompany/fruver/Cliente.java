@@ -7,5 +7,8 @@ public class Cliente {
     public Cliente(String nombre) {
         this.nombre = nombre;
     }
+    public void comprar(Producto p, int cant) {
+        p.vender(cant);
+    }
 
 }
