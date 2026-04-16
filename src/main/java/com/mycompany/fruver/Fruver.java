@@ -67,7 +67,18 @@ public class Fruver{
             t.atender(cliente);
             break; 
             // Eliminar producto
-        
+        case 6:
+            // Aqui el usuario elimina un producto de la lista
+            String nombreEliminar = Input.nextLine("Producto a eliminar: ");
+
+            Producto eliminado = lista.eliminar(nombreEliminar);
+
+            if (eliminado != null) {
+            System.out.println("Se elimino el producto: " + eliminado.nombre);
+            } else {
+                System.out.println("No se pudo eliminar, producto no encontrado");
+            }
+            break;
         }
      }while (opcion!=0);
         System.out.println("programa finalizado");
