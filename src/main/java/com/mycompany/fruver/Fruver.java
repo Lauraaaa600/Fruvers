@@ -78,8 +78,10 @@ public class Fruver{
            break;
           //trabajador va a atender
         case 5:
+            
+            String nombreCliente2=Input.nextLine("Nombre del cliente: ");
             Trabajador t = new Trabajador("Pedro");
-            Cliente cliente = new Cliente("");
+            Cliente cliente = new Cliente(nombreCliente2);
 
             t.atender(cliente);
             break; 
