@@ -1,13 +1,15 @@
 package com.mycompany.fruver;
 
 import com.murcia.utils.*;
-
+// Clase que representa una lista enlazada de productos
+// Hereda de la libreria del profesor
 public class ListaProductos extends ListaEnlazada<Producto> {
-
+    // Metodo para insertar productos (simula cola: entra al final)
     public void insertar(Producto p) {
         add(p); // ya inserta al final automáticamente
+        System.out.println("Se encolo el producto: " + p.nombre);
     }
-
+    //Metodo para mostrar todos los productos
     public void mostrar() {
 
         if (head == null) {
@@ -16,9 +18,10 @@ public class ListaProductos extends ListaEnlazada<Producto> {
         }
 
         Nodo<Producto> aux = head;
-
+        //Se recorre nodo por nodo
         while (aux != null) {
-            System.out.println(aux.getData().nombre);
+            System.out.println("Producto: " + aux.getData().nombre +
+                               " | Cantidad: " + aux.getData().cantidad);
             aux = aux.getNext();
         }
     }
