@@ -9,6 +9,7 @@ public class Cliente {
     }
     //se crea el metodo para comprar el producto
     public void comprar(Producto p, int cant) {
+       System.out.println(nombre + " esta comprando..."); 
         p.vender(cant);
     }
 
