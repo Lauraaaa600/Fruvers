@@ -25,7 +25,7 @@ public class ListaProductos extends ListaEnlazada<Producto> {
             aux = aux.getNext();
         }
     }
-
+    //Metodo para buscar un producto
     public Producto buscar(String nombre) {
 
         Nodo<Producto> aux = head;
@@ -42,6 +42,43 @@ public class ListaProductos extends ListaEnlazada<Producto> {
             }
 
             aux = aux.getNext();
+        }
+
+        return null;
+    }
+    // Metodo para eliminar un producto de la lista enlazada
+    public Producto eliminar(String nombre) {
+
+        // Si la lista esta vacia
+        if (head == null) {
+            System.out.println("Lista vacia, no se puede eliminar");
+            return null;
+        }
+
+        Nodo<Producto> actual = head;
+        Nodo<Producto> anterior = null;
+
+        // Se recorre la lista
+        while (actual != null) {
+
+            if (actual.getData().nombre.equalsIgnoreCase(nombre)) {
+
+                System.out.println("Eliminando producto: " + actual.getData().nombre);
+
+                // Si es el primero
+                if (anterior == null) {
+                    head = actual.getNext();
+                } 
+                // Si esta en medio o final
+                else {
+                    anterior.setNext(actual.getNext());
+                }
+
+                return actual.getData();
+            }
+
+            anterior = actual;
+            actual = actual.getNext();
         }
 
         return null;
