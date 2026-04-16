@@ -53,17 +53,30 @@ public class Fruver{
             Cliente c = new Cliente(nombreCliente);
 
             String nombreProd = Input.nextLine("Producto a comprar: ");
+
             Producto prod = lista.buscar(nombreProd);
 
             if (prod != null) {
-            int cant = Input.nextInt("Cantidad a comprar: ");
-            Input.nextLine("");
-            c.comprar(prod, cant);
 
-            System.out.println("Compra realizada por " + nombreCliente);
+            int cant = Input.nextInt("Cantidad a comprar: ");
+            Input.nextLine(""); // limpiar buffer
+
+            Trabajador t = new Trabajador("Pedro");
+
+            System.out.println("El trabajador " + t.nombre + " esta atendiendo a " + nombreCliente);
+
+            boolean compra = prod.vender(cant);
+
+           if (compra) {
+              System.out.println("Gracias por su compra " + nombreCliente);
             }
-            break;
-            //trabajador va a atender
+
+            } else {
+              System.out.println("El producto no se encuentra disponible");
+            }
+
+           break;
+          //trabajador va a atender
         case 5:
             Trabajador t = new Trabajador("Pedro");
             Cliente cliente = new Cliente("Ana");
