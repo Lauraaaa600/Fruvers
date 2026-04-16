@@ -30,8 +30,9 @@ public class Fruver{
         case 1:
             String nombre = Input.nextLine("Nombre del producto: ");
             int cantidad = Input.nextInt("Cantidad del producto: ");
+            double precio = Input.nextFloat("Precio del producto: ");
             Input.nextLine("");
-            lista.insertar(new Producto(nombre, cantidad));
+            lista.insertar(new Producto(nombre, cantidad, precio));
             System.out.println("Producto insertado correctamente");
             break;
         //Mostar productos
