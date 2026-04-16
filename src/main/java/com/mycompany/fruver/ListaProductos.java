@@ -33,10 +33,8 @@ public class ListaProductos extends ListaEnlazada<Producto> {
         while (aux != null) {
             if (aux.getData().nombre.equals(nombre)) {
 
-                System.out.println(
-                    "Producto: " + aux.getData().nombre +
-                    " Cantidad: " + aux.getData().cantidad
-                );
+                System.out.println("Producto: " + aux.getData().nombre);
+                System.out.println("Cantidad: " + aux.getData().cantidad);
 
                 return aux.getData();
             }

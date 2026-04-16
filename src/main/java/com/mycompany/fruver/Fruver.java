@@ -6,7 +6,8 @@ public class Fruver{
 //clase principal de Fruver
     public static void main(String[] args) {
      ListaProductos lista= new ListaProductos();   
-     int opcion;
+        int opcion;
+    
      
      do{
         System.out.println("--- BIENVENIDO A FRUVER ---");
@@ -22,13 +23,14 @@ public class Fruver{
     
     
     
-    int opcion = Input.nextInt("Ingrese su opcion: ");
-    
+    opcion = Input.nextInt("Ingrese su opcion: ");
+    Input.nextLine("");
     switch (opcion) {
         //Insetar producto
         case 1:
             String nombre = Input.nextLine("Nombre del producto: ");
             int cantidad = Input.nextInt("Cantidad del producto: ");
+            Input.nextLine("");
             lista.insertar(new Producto(nombre, cantidad));
             System.out.println("Producto insertado correctamente");
             break;
@@ -54,6 +56,7 @@ public class Fruver{
 
             if (prod != null) {
             int cant = Input.nextInt("Cantidad a comprar: ");
+            Input.nextLine("");
             c.comprar(prod, cant);
 
             System.out.println("Compra realizada por " + nombreCliente);
