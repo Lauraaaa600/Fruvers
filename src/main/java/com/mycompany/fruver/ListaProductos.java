@@ -1,47 +1,47 @@
 package com.mycompany.fruver;
 
-public class ListaProductos {
-    NodoProducto inicio;
-    
-  public void insertar(Producto p) {
-    NodoProducto nuevo = new NodoProducto(p);
-    
-    if (inicio == null) {
-        inicio = nuevo;
-       } else {
-        NodoProducto aux = inicio;
-        while (aux.siguiente != null) {
-            aux = aux.siguiente;
-        }
-        aux.siguiente = nuevo;
-       }
-  }
-     public void mostrar() {
+import com.murcia.utils.*;
 
-        if (inicio == null) {
+public class ListaProductos extends ListaEnlazada<Producto> {
+
+    public void insertar(Producto p) {
+        add(p); // ya inserta al final automáticamente
+    }
+
+    public void mostrar() {
+
+        if (head == null) {
             System.out.println("Lista vacia");
             return;
         }
 
-        NodoProducto aux = inicio;
+        Nodo<Producto> aux = head;
 
         while (aux != null) {
-            System.out.println(aux.dato.nombre);
-            aux = aux.siguiente;
+            System.out.println(aux.getData().nombre);
+            aux = aux.getNext();
         }
-    }  
-    public Producto buscar(String nombre) {
-        NodoProducto aux = inicio;
+    }
 
-        while (aux != null) {   
-            if (aux.dato.nombre.equals(nombre)) {
-                System.out.println("Producto: " + aux.dato.nombre + " Cantidad: " + aux.dato.cantidad);  
-                return aux.dato;
+    public Producto buscar(String nombre) {
+
+        Nodo<Producto> aux = head;
+
+        while (aux != null) {
+            if (aux.getData().nombre.equals(nombre)) {
+
+                System.out.println(
+                    "Producto: " + aux.getData().nombre +
+                    " Cantidad: " + aux.getData().cantidad
+                );
+
+                return aux.getData();
             }
-            aux = aux.siguiente;
+
+            aux = aux.getNext();
         }
 
         return null;
     }
-    //error no deja copilar
-}
+}    
+
