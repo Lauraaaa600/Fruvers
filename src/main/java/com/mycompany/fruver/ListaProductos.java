@@ -20,8 +20,9 @@ public class ListaProductos extends ListaEnlazada<Producto> {
         Nodo<Producto> aux = head;
         //Se recorre nodo por nodo
         while (aux != null) {
-            System.out.println("Producto: " + aux.getData().nombre +
-                               " | Cantidad: " + aux.getData().cantidad);
+            System.out.println("Producto: " + aux.getData().nombre);
+            System.out.println("Cantidad: " + aux.getData().cantidad);
+            System.out.println("Precio: " + aux.getData().precio);
             aux = aux.getNext();
         }
     }
@@ -35,7 +36,7 @@ public class ListaProductos extends ListaEnlazada<Producto> {
 
                 System.out.println("Producto: " + aux.getData().nombre);
                 System.out.println("Cantidad: " + aux.getData().cantidad);
-
+                System.out.println("Precio: " + aux.getData().precio);
                 return aux.getData();
             }
 

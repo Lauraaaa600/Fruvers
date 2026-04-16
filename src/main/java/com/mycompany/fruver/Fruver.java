@@ -79,7 +79,7 @@ public class Fruver{
           //trabajador va a atender
         case 5:
             Trabajador t = new Trabajador("Pedro");
-            Cliente cliente = new Cliente("Ana");
+            Cliente cliente = new Cliente("");
 
             t.atender(cliente);
             break; 
